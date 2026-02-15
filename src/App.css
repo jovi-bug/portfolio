@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@font-face {
+    font-family: Bricolage; /* set name */
+    src: url('../src/assets/fonts/BricolageGrotesque.ttf');
+}
+
+@font-face {
+    font-family: Lato-Regular; /* set name */
+    src: url('../src/assets/fonts/Lato-Regular.ttf');
+}
+
+
+@theme{
+    --font-display: "Bricolage", "sans-serif";
+    --font-text: "Lato-Regular", "sans-serif";
+
+    --color-primary-dark: #1F3329;
+    --color-primary: #D77A61;
+    --color-primary-light: #B4C7AE;
+
+    --color-bg-dark: #0F1E17;
+    --color-bg-light: #E8F0E5;
+    --color-bg-white: #FFFFFF;
+
+    --color-text-primary: #0F1E17;
+    --color-text-secondary: #4A5568;
+    --color-text-white: #FFFFFF;
+}
