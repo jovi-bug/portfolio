@@ -1,30 +1,25 @@
-import './App.css'
-import AboutSection from "./components/AboutSections.jsx";
-import Header from "./components/Header.jsx";
-import SkillsSection from "./components/SkillsSection.jsx";
-import ProjectsSection from "./components/ProjectsSection.jsx";
-import FadeInSection from "./components/FadeInSection.jsx";
+import '@/styles.css'
+import Navbar from "@/components/Navbar.jsx";
+import Hero from "@/components/sections/Hero.jsx";
+import About from "@/components/sections/About.jsx";
+import Skills from "@/components/sections/Skills.jsx";
+import Projects from "@/components/sections/Projects.jsx";
+import Contact from "@/components/sections/Contact.jsx";
 
 function App() {
     return (
-        <>
-            <Header/>
-            <div className="max-w-7xl mx-auto font-text">
-
-                <FadeInSection>
-                    <AboutSection/>
-                </FadeInSection>
-                <FadeInSection>
-                    <SkillsSection/>
-                </FadeInSection>
-                <FadeInSection>
-                    <ProjectsSection/>
-                </FadeInSection>
-
+            <div className="min-h-screen overflow-x-hidden">
+                <Navbar/>
+                <main>
+                    <Hero></Hero>
+                    <About></About>
+                    <Skills></Skills>
+                    <Projects></Projects>
+                    <Contact></Contact>
+                </main>
 
             </div>
 
-        </>
     );
 }
 

@@ -14,7 +14,7 @@ const about = {
             id: "cv_2",
             period: "09.2017 - 08.2018",
             institution: "ORION Versand",
-            description: "Werkstudentin Customer Experience",
+            description: "Werkstudentin Customer About",
             type: "work"
         },
         {

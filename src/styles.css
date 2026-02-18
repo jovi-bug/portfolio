@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Bricolage; /* set name */
+    src: url('../src/assets/fonts/BricolageGrotesque.ttf');
+}
+
+@font-face {
+    font-family: Lato-Regular; /* set name */
+    src: url('../src/assets/fonts/Lato-Regular.ttf');
+}
+
+
+@theme{
+    --font-display: "Bricolage", "sans-serif";
+    --font-text: "Lato-Regular", "sans-serif";
+
+
+    --color-bg-dark: #0F1E17;
+    --color-bg-dark-card: #182A20;
+
+    --color-bg-light: #EEF3EB;
+    --color-bg-light-card: #D9E2D5;
+
+    --color-forest: #1F3329;
+    --color-forest-mid: #4A5A52;
+
+    --color-sage: #B4C7AE;
+
+    --color-coral: #D77A61;
+    --color-coral-dark: #CC5433;
+    --color-coral-light: #E8B0A1;
+
+    --color-text-primary-dark: #E8E4DC;
+    --color-text-muted-dark: #8A9A87;
+
+    --color-text-primary-light: #1A2018;
+    --color-text-muted-light: #5C6A58;
+
+    --radius: 0.75rem;
+
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-bg-light);
+        color: var(--color-text-primary-light);
+        font-family: 'Lato-Regular', 'sans-serif';
+    }
+
+    .font-display {
+        font-family: 'Bricolage', 'sans-serif';
+    }
+}
