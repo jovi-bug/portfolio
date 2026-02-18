@@ -26,6 +26,7 @@
     --color-forest-mid: #4A5A52;
 
     --color-sage: #B4C7AE;
+    --color-sage-shade: #a2b39d;
 
     --color-coral: #D77A61;
     --color-coral-dark: #CC5433;
@@ -55,4 +56,13 @@
     .font-display {
         font-family: 'Bricolage', 'sans-serif';
     }
+}
+
+@layer components {
+    .menu-backdrop{
+        background-color: color-mix(in srgb, var(--color-bg-light-card) 50%, transparent);
+        backdrop-filter: blur(16px);
+        border: 1px solid color-mix(in srgb, var(--color-bg-light) 50%, transparent);
+    }
+
 }
