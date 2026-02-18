@@ -64,5 +64,10 @@
         backdrop-filter: blur(16px);
         border: 1px solid color-mix(in srgb, var(--color-bg-light) 50%, transparent);
     }
+    .menu-backdrop-strong{
+        background-color: color-mix(in srgb, var(--color-bg-light-card) 80%, transparent);
+        backdrop-filter: blur(24px);
+        border: 1px solid color-mix(in srgb, var(--color-bg-light) 60%, transparent);
+    }
 
 }

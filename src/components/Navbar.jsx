@@ -1,6 +1,10 @@
 import Button from "@/components/smallComponents/Button.jsx";
+import {Menu, X} from 'lucide-react'
+import {useState} from "react";
 
 const Navbar = () => {
+
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navLinks = [
         {href: "#about", label: "About"},
@@ -18,7 +22,8 @@ const Navbar = () => {
                         TN <span className="text-forest-mid">.</span>
                     </a>
 
-                    <div className="flex items-center gap-1">
+                    {/* Desktop Nav */}
+                    <div className="hidden md:flex items-center gap-1">
                         <div className="px-2 py-1 flex items-center gap-1 rounded-full">
                             {navLinks.map((link, index) => (
                                 <a key={index} href={link.href}
@@ -26,12 +31,31 @@ const Navbar = () => {
                                     {link.label}
                                 </a>
                             ))}
-
                         </div>
                     </div>
-                    <div>
-                        <Button>Contact Me</Button>
+                    <div className="hidden md:block">
+                        <Button size="sm">Contact Me</Button>
                     </div>
+
+                    {/* Mobile Menu Button */}
+                    <button onClick={() => setIsMobileMenuOpen((prev) => !prev)} className="md:hidden p-2 text-forest">
+                        {isMobileMenuOpen ? <X size={24}/> : <Menu size={24}/>}
+                    </button>
+
+                    {/* Mobile Menu */}
+                    {isMobileMenuOpen &&
+                        (<div className="md:hidden menu-backdrop-strong">
+                        <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+                            {navLinks.map((link, index) => (
+                                <a key={index} href={link.href}
+                                   className="text-lg text-forest-mid hover:text-forest py-2 transition-all">
+                                    {link.label}
+                                </a>
+                            ))}
+                            <Button>Contact Me</Button>
+
+                        </div>
+                    </div>)}
                 </nav>
             </div>
         </header>
