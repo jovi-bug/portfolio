@@ -1,6 +1,6 @@
 const Button = ({className ="", size = "default", children}) => {
     const baseClasses = "relative overflow-hidden rounded-full font-bold" +
-        "focus:outline-none focus-visible:ring-2 focus-visible:ring-coral " +
+        "focus:outline-none focus-visible:ring-2 focus-visible:ring-accent " +
         "bg-sage hover:bg-sage/60 transition-all shadow-lg shadow-sage/25 cursor-pointer";
 
     const sizeClasses = {

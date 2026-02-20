@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="blur-bg py-5">
                 <nav className="container mx-auto px-6 flex items-center justify-between">
                     <a href="#"
-                       className="text-forest-mid font-display font-bold text-xl tracking-tight hover:text-coral transition-all">
+                       className="text-forest-mid font-display font-bold text-xl tracking-tight hover:text-accent transition-all">
                         TN <span className="text-forest-mid">.</span>
                     </a>
 
@@ -27,7 +27,7 @@ const Navbar = () => {
                         <div className="px-2 py-1 flex items-center gap-1 rounded-full">
                             {navLinks.map((link, index) => (
                                 <a key={index} href={link.href}
-                                   className=" text-forest-mid px-4 py-2 text-base rounded-full hover:text-coral transition-all">
+                                   className=" text-forest-mid px-4 py-2 text-base rounded-full hover:text-accent transition-all">
                                     {link.label}
                                 </a>
                             ))}
@@ -50,7 +50,7 @@ const Navbar = () => {
                         <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                             {navLinks.map((link, index) => (
                                 <a key={index} href={link.href}
-                                   className="text-lg text-forest-mid hover:text-coral py-2 transition-all">
+                                   className="text-lg text-text-primary-light hover:text-accent py-2 transition-all">
                                     {link.label}
                                 </a>
                             ))}

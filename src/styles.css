@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @source ".";
 
 @font-face {
@@ -16,12 +17,11 @@
     --font-display: "Bricolage", "sans-serif";
     --font-text: "Lato-Regular", "sans-serif";
 
+    --color-bg-dark: #020302;
+    --color-bg-dark-card: #09110D;
 
-    --color-bg-dark: #0F1E17;
-    --color-bg-dark-card: #182A20;
-
-    --color-bg-light: #EEF3EB;
-    --color-bg-light-card: #D9E2D5;
+    --color-bg-light: #fcfdfc;
+    --color-bg-light-card: #E5F2EB;
 
     --color-forest: #1F3329;
     --color-forest-mid: #4A5A52;
@@ -29,15 +29,11 @@
     --color-sage: #B4C7AE;
     --color-sage-shade: #a2b39d;
 
-    --color-coral: #D77A61;
-    --color-coral-dark: #CC5433;
-    --color-coral-light: #E8B0A1;
+    --color-accent: #E65180;
+    --color-accent-dark: #AE1948;
 
-    --color-text-primary-dark: #E8E4DC;
-    --color-text-muted-dark: #8A9A87;
-
-    --color-text-primary-light: #1A2018;
-    --color-text-muted-light: #5C6A58;
+    --color-text-primary-dark: #070808;
+    --color-text-primary-light: #EBEBEB;
 
     --radius: 0.75rem;
 
@@ -50,7 +46,7 @@
 
     body {
         background-color: var(--color-bg-light);
-        color: var(--color-text-primary-light);
+        color: var(--color-text-primary-dark);
         font-family: 'Lato-Regular', 'sans-serif';
     }
 
@@ -60,16 +56,16 @@
 }
 
 @layer components {
-    .blur-bg{
+    .blur-bg {
         background-color: color-mix(in srgb, var(--color-bg-light-card) 50%, transparent);
         backdrop-filter: blur(16px);
         border: 1px solid color-mix(in srgb, var(--color-bg-light) 50%, transparent);
     }
-    .blur-bg-strong{
+
+    .blur-bg-strong {
         background-color: color-mix(in srgb, var(--color-bg-light-card) 80%, transparent);
         backdrop-filter: blur(24px);
         border: 1px solid color-mix(in srgb, var(--color-bg-light) 60%, transparent);
     }
-
 
 }

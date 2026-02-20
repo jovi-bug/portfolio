@@ -1,5 +1,6 @@
 const about = {
-    name: "Tjorve Nielsen",
+    name: "Tjorve",
+    lastName: "Nielsen",
     title: "Frontend Developer",
     description: "I'm a Frontend Developer based in northern Germany. I strive to build quick, modern and beautiful websites and web apps. I have a background in graphic design and I am currently on a journey to become a full stack developer.",
     cv: [
