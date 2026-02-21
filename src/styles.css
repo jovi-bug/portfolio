@@ -53,6 +53,10 @@
     .font-display {
         font-family: 'Bricolage', 'sans-serif';
     }
+
+    p {
+        line-height: 2;
+    }
 }
 
 @layer components {
@@ -66,6 +70,21 @@
         background-color: color-mix(in srgb, var(--color-bg-light-card) 80%, transparent);
         backdrop-filter: blur(24px);
         border: 1px solid color-mix(in srgb, var(--color-bg-light) 60%, transparent);
+    }
+
+    .border-gradient-left {
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    .border-gradient-left::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background: linear-gradient(to bottom, #4A5A52, #4A5A5200);
     }
 
 }

@@ -3,7 +3,7 @@ function Skills() {
     return (
 
         <>
-            <section>
+            <section id="about" className="relative min-h-screen flex items-center overflow-hidden">
 
             </section>
         </>

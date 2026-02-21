@@ -19,7 +19,7 @@ const Navbar = () => {
                 <nav className="container mx-auto px-6 flex items-center justify-between">
                     <a href="#"
                        className="text-forest-mid font-display font-bold text-xl tracking-tight hover:text-accent transition-all">
-                        TN <span className="text-forest-mid">.</span>
+                        TN<span className="text-forest-mid">.</span>
                     </a>
 
                     {/* Desktop Nav */}
@@ -50,7 +50,7 @@ const Navbar = () => {
                         <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                             {navLinks.map((link, index) => (
                                 <a key={index} href={link.href}
-                                   className="text-lg text-text-primary-light hover:text-accent py-2 transition-all">
+                                   className="text-lg text-text-primary-dark hover:text-accent py-2 transition-all">
                                     {link.label}
                                 </a>
                             ))}

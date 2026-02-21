@@ -8,28 +8,32 @@ const about = {
             id: "cv_1",
             period: "2015 - 2019",
             institution: "Hochschule Flensburg",
-            description: "B.Sc. Medieninformatik",
+            title: "B.Sc. Medieninformatik",
+            description: "Lorem ipsum dolor sit amet, sdfghjkl dfghj sdfrtgh sedrftgzhuj",
             type: "education"
         },
         {
             id: "cv_2",
             period: "09.2017 - 08.2018",
             institution: "ORION Versand",
-            description: "Werkstudentin Customer About",
+            title: "Werkstudentin Customer Experience",
+            description: "Lorem ipsum dolor sit amet, sdfghjkl dfghj sdfrtgh sedrftgzhuj",
             type: "work"
         },
         {
             id: "cv_3",
             period: "11.2019 - 06.2025",
             institution: "ORION Versand",
-            description: "Grafikerin und stellvertretende Teamleitung Grafik",
+            title: "Grafikerin und stellvertretende Teamleitung Grafik",
+            description: "Lorem ipsum dolor sit amet, sdfghjkl dfghj sdfrtgh sedrftgzhuj",
             type: "work"
         },
         {
             id: "cv_4",
             period: "08.2025 - present",
             institution: "alfatraining Bildungszentrum",
-            description: "Fortbildung Fullstack-Developerin",
+            title: "Fortbildung Fullstack-Developerin",
+            description: "Lorem ipsum dolor sit amet, sdfghjkl dfghj sdfrtgh sedrftgzhuj",
             type: "education"
         }
     ]
