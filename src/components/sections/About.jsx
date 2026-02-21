@@ -5,10 +5,10 @@ import {useState} from "react";
 
 function About() {
 
-    const [hoveredEntry, setHoveredEntry] = useState(null)
+    const [hoveredEntry, setHoveredEntry] = useState(about.cv[0])
 
+    //TODO: Add Animations
     return (
-
         <>
             <section id="about" className="relative min-h-screen flex items-center overflow-hidden">
 
@@ -16,23 +16,22 @@ function About() {
 
 
                     {/*  Introduction and Image */}
-                    <div className="grid md:grid-cols-2 justify-between md:gap-20">
-                        <div>
+                    <div className="grid md:grid-cols-3 justify-between md:gap-20">
+                        <div className="col-span-2">
                             <Headline2 content="About"></Headline2>
 
                             <p>{about.description}</p>
                         </div>
                         <img className="rounded-xl h-52 w-52 object-cover shadow-lg shadow-forest-mid/25"
-                             src="/images/Bewerbungsfoto.jpg"/>
+                             src="/images/Bewerbungsfoto.jpg"
+                             alt="Resume Photo"/>
 
                     </div>
 
                     {/*  Resume  */}
-
                     <div className="grid md:grid-cols-2 md:gap-20">
 
                         {/*  Details for resume entries  */}
-
                         <div>
                             {hoveredEntry && <div
                                 className="blur-bg flex flex-col gap-2 p-6 min-h-52 justify-center rounded-xl shadow-forest-mid/25 shadow-lg">
@@ -42,12 +41,12 @@ function About() {
                             </div>}
                         </div>
                         <div>
+                            {/* TODO: Active entry in accent color*/}
                             <Headline3 content="Resume"></Headline3>
                             <div className="space-y-6  border-gradient-left pl-4">
                                 {about.cv.map(entry => (
                                     <h4 className="font-display font-bold text-forest hover:text-accent hover:cursor-pointer"
                                         onMouseEnter={() => setHoveredEntry(entry)}
-                                        // onMouseLeave={() => setHoveredEntry(null)}
                                         onClick={() => setHoveredEntry(entry)}>
                                         {entry.title}
                                     </h4>

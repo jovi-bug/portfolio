@@ -1,9 +1,11 @@
+import Headline2 from "@/components/typography/Headline2.jsx";
 
 function Skills() {
     return (
 
         <>
-            <section id="about" className="relative min-h-screen flex items-center overflow-hidden">
+            <section id="skills" className="relative min-h-screen flex items-center overflow-hidden">
+                <Headline2>Skills</Headline2>
 
             </section>
         </>

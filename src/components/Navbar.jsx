@@ -1,4 +1,4 @@
-import Button from "@/components/smallComponents/Button.jsx";
+import AnimatedButton from "@/components/smallComponents/AnimatedButton.jsx";
 import {Menu, X} from 'lucide-react'
 import {useState} from "react";
 
@@ -8,8 +8,8 @@ const Navbar = () => {
 
     const navLinks = [
         {href: "#about", label: "About"},
-        {href: "#projects", label: "Projects"},
         {href: "#skills", label: "Skills"},
+        {href: "#projects", label: "Projects"},
         {href: "#contact", label: "Contact"},
     ];
 
@@ -34,10 +34,10 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="hidden md:block">
-                        <Button size="sm">Contact Me</Button>
+                        <AnimatedButton size="sm">Contact Me</AnimatedButton>
                     </div>
 
-                    {/* Mobile Menu Button */}
+                    {/* Mobile Menu AnimatedButton */}
                     <button onClick={() => setIsMobileMenuOpen((prev) => !prev)} className="md:hidden p-2 text-forest">
                         {isMobileMenuOpen ? <X size={24}/> : <Menu size={24}/>}
                     </button>
@@ -54,7 +54,7 @@ const Navbar = () => {
                                     {link.label}
                                 </a>
                             ))}
-                            <Button className="min-w-40 w-1/4">Contact Me</Button>
+                            <AnimatedButton className="min-w-40 w-1/4">Contact Me</AnimatedButton>
 
                         </div>
                     </div>)}
