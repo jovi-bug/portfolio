@@ -1,20 +1,37 @@
 import Headline2 from "@/components/typography/Headline2.jsx";
 import Headline3 from "@/components/typography/Headline3.jsx";
 import about from "@/data/about.js";
-import {useState} from "react";
+import {useRef, useState} from "react";
+import {motion, useInView, AnimatePresence} from "framer-motion";
+
+const cvContainer = {
+    hidden: {opacity: 0},
+    visible: {opacity: 1, transition: {staggerChildren: 0.2, delayChildren: 0.5, duration: 0.5}}
+}
+const cvItem = {
+    hidden: {opacity: 0, y: 10},
+    visible: {opacity: 1, y: 0}
+}
 
 function About() {
 
     const [hoveredEntry, setHoveredEntry] = useState(about.cv[0])
 
-    //TODO: Add Animations
+    const ref = useRef(null)
+    const isInView = useInView(ref, {
+        once: true,
+        margin: "0px 100px -50px 0px"
+    })
+
     return (
         <>
             <section id="about" className="relative min-h-screen flex items-center overflow-hidden">
 
-                <div className="container md:mx-60 px-6 pt-32 pb-20 relative z-10 space-y-16">
-
-
+                <motion.div ref={ref}
+                            initial={{opacity: 0, y: 20}}
+                            animate={isInView ? {opacity: 1, y: 0} : {opacity: 0, y: 20}}
+                            transition={{duration: 0.8, ease: "easeOut"}}
+                            className="container md:mx-60 px-6 pt-32 pb-20 relative z-10 space-y-16">
                     {/*  Introduction and Image */}
                     <div className="grid md:grid-cols-3 justify-between md:gap-20">
                         <div className="col-span-2">
@@ -32,30 +49,43 @@ function About() {
                     <div className="grid md:grid-cols-2 md:gap-20">
 
                         {/*  Details for resume entries  */}
-                        <div>
-                            {hoveredEntry && <div
-                                className="blur-bg flex flex-col gap-2 p-6 min-h-52 justify-center rounded-xl shadow-forest-mid/25 shadow-lg">
-                                <span className="block w-full">{hoveredEntry.period}</span>
-                                <h4 className="block w-full font-display font-bold text-forest hover:text-accent">{hoveredEntry.institution}</h4>
-                                <span className="block w-full">{hoveredEntry.description}</span>
-                            </div>}
-                        </div>
+                        <motion.div>
+                            <AnimatePresence mode="wait">
+                                {hoveredEntry && <motion.div
+                                    key={hoveredEntry.title}
+                                    initial={{opacity: 0, y: 10}}
+                                    animate={{opacity: 1, y: 0}}
+                                    exit={{opacity: 0, y: 10}}
+                                    transition={{duration: 0.3}}
+                                    className="blur-bg flex flex-col gap-2 p-6 min-h-52 justify-center rounded-xl shadow-forest-mid/25 shadow-lg">
+                                    <span className="block w-full">{hoveredEntry.period}</span>
+                                    <h4 className="block w-full font-display font-bold text-forest hover:text-accent">{hoveredEntry.institution}</h4>
+                                    <span className="block w-full">{hoveredEntry.description}</span>
+                                </motion.div>}
+                            </AnimatePresence>
+                        </motion.div>
                         <div>
                             {/* TODO: Active entry in accent color*/}
                             <Headline3 content="Resume"></Headline3>
-                            <div className="space-y-6  border-gradient-left pl-4">
+                            <motion.div variants={cvContainer}
+                                        initial="hidden"
+                                        animate={isInView ? "visible" : "hidden"}
+                                        className="space-y-6  border-gradient-left pl-4">
                                 {about.cv.map(entry => (
-                                    <h4 className="font-display font-bold text-forest hover:text-accent hover:cursor-pointer"
+                                    <motion.h4
+                                        variants={cvItem}
+                                        className="font-display font-bold text-forest hover:text-accent hover:cursor-pointer"
+                                        style={hoveredEntry === entry ? {color: "#E65180"} : {color: "#1F3329"}}
                                         onMouseEnter={() => setHoveredEntry(entry)}
                                         onClick={() => setHoveredEntry(entry)}>
                                         {entry.title}
-                                    </h4>
+                                    </motion.h4>
                                 ))}
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
 
-                </div>
+                </motion.div>
             </section>
         </>
     );

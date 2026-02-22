@@ -1,12 +1,19 @@
 import about from "@/data/about.js";
 import AnimatedButton from "@/components/smallComponents/AnimatedButton.jsx";
 import Star from "@/components/smallComponents/Star.jsx";
+import {motion} from "framer-motion"
 
 function AboutSection() {
     return (
         <section className="relative min-h-screen flex items-center overflow-hidden">
 
-            <div className="container md:mx-60 px-6 pt-32 pb-20 relative z-10 text-forest">
+            <motion.div
+                initial={{opacity:0, y: 10}}
+                animate={{opacity:1, y:0}}
+                transition={{duration: 0.5}}
+                // whileInView={{opacity: 1}}
+                layout
+                className="container md:mx-60 px-6 pt-32 pb-20 relative z-10 text-forest">
                 <div>
                     {/* Stars */}
 
@@ -39,7 +46,7 @@ function AboutSection() {
                     {/* TODO: Implement OnClick */}
                     <AnimatedButton>Browse projects</AnimatedButton>
                 </div>
-            </div>
+            </motion.div>
 
 
         </section>
