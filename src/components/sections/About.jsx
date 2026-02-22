@@ -15,8 +15,10 @@ const cvItem = {
 
 function About() {
 
+    // State for the currently shown cv-entry, by default set to most recent entry
     const [hoveredEntry, setHoveredEntry] = useState(about.cv[0])
 
+    //Animation only on initial entry into viewport, slight margin on viewport
     const ref = useRef(null)
     const isInView = useInView(ref, {
         once: true,
@@ -26,12 +28,12 @@ function About() {
     return (
         <>
             <section id="about" className="relative min-h-screen flex items-center overflow-hidden">
-
                 <motion.div ref={ref}
                             initial={{opacity: 0, y: 20}}
                             animate={isInView ? {opacity: 1, y: 0} : {opacity: 0, y: 20}}
                             transition={{duration: 0.8, ease: "easeOut"}}
                             className="container md:mx-60 px-6 pt-32 pb-20 relative z-10 space-y-16">
+
                     {/*  Introduction and Image */}
                     <div className="grid md:grid-cols-3 justify-between md:gap-20">
                         <div className="col-span-2">
@@ -65,7 +67,6 @@ function About() {
                             </AnimatePresence>
                         </motion.div>
                         <div>
-                            {/* TODO: Active entry in accent color*/}
                             <Headline3 content="Resume"></Headline3>
                             <motion.div variants={cvContainer}
                                         initial="hidden"
@@ -84,12 +85,10 @@ function About() {
                             </motion.div>
                         </div>
                     </div>
-
                 </motion.div>
             </section>
         </>
     );
 }
 
-export default About
-;
+export default About;
