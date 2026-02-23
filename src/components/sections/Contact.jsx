@@ -1,12 +1,13 @@
 import Headline2 from "@/components/typography/Headline2.jsx";
+import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
 
 function Contact() {
     return (
 
         <>
-            <section id="contact" className="relative min-h-screen flex items-center overflow-hidden">
+            <AnimatedSection id="contact">
                 <Headline2>Contact</Headline2>
-            </section>
+            </AnimatedSection>
         </>
     );
 }

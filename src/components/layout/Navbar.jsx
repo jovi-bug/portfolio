@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <header className="fixed top-0 left-0 right-0 bg-transparent z-50">
             <div className="blur-bg py-5">
-                <nav className="container mx-auto px-6 flex items-center justify-between">
+                <nav className="container mx-auto px-12 flex items-center justify-between">
                     <a href="#"
                        className="text-forest-mid font-display font-bold text-xl tracking-tight hover:text-accent transition-all">
                         TN<span className="text-forest-mid">.</span>
@@ -49,7 +49,9 @@ const Navbar = () => {
                     (<div className="md:hidden">
                         <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
                             {navLinks.map((link, index) => (
-                                <a key={index} href={link.href}
+                                <a key={index}
+                                   href={link.href}
+                                   onClick={() => setIsMobileMenuOpen((prev) => !prev)}
                                    className="text-lg text-text-primary-dark hover:text-accent py-2 transition-all">
                                     {link.label}
                                 </a>

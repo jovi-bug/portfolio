@@ -13,6 +13,14 @@ const about = {
             type: "education"
         },
         {
+            id: "cv_3",
+            period: "11.2019 - 06.2025",
+            institution: "ORION Versand",
+            title: "Grafikerin und stellvertretende Teamleitung Grafik",
+            description: "Lorem ipsum dolor sit amet, sdfghjkl dfghj sdfrtgh sedrftgzhuj",
+            type: "work"
+        },
+        {
             id: "cv_1",
             period: "2015 - 2019",
             institution: "Hochschule Flensburg",
@@ -25,14 +33,6 @@ const about = {
             period: "09.2017 - 08.2018",
             institution: "ORION Versand",
             title: "Werkstudentin Customer Experience",
-            description: "Lorem ipsum dolor sit amet, sdfghjkl dfghj sdfrtgh sedrftgzhuj",
-            type: "work"
-        },
-        {
-            id: "cv_3",
-            period: "11.2019 - 06.2025",
-            institution: "ORION Versand",
-            title: "Grafikerin und stellvertretende Teamleitung Grafik",
             description: "Lorem ipsum dolor sit amet, sdfghjkl dfghj sdfrtgh sedrftgzhuj",
             type: "work"
         }

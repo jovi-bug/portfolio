@@ -3,6 +3,7 @@ import Headline3 from "@/components/typography/Headline3.jsx";
 import about from "@/data/about.js";
 import {useRef, useState} from "react";
 import {motion, useInView, AnimatePresence} from "framer-motion";
+import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
 
 const cvContainer = {
     hidden: {opacity: 0},
@@ -27,28 +28,25 @@ function About() {
 
     return (
         <>
-            <section id="about" className="relative min-h-screen flex items-center overflow-hidden">
+            <AnimatedSection id="about">
                 <motion.div ref={ref}
                             initial={{opacity: 0, y: 20}}
                             animate={isInView ? {opacity: 1, y: 0} : {opacity: 0, y: 20}}
-                            transition={{duration: 0.8, ease: "easeOut"}}
-                            className="container md:mx-60 px-6 pt-32 pb-20 relative z-10 space-y-16">
+                            transition={{duration: 0.8, ease: "easeOut"}}>
 
                     {/*  Introduction and Image */}
-                    <div className="grid md:grid-cols-3 justify-between md:gap-20">
+                    <Headline2>About</Headline2>
+                    <div className="flex flex-col-reverse gap-10 md:grid md:grid-cols-3 md:justify-between md:gap-20">
                         <div className="col-span-2">
-                            <Headline2 content="About"></Headline2>
-
                             <p>{about.description}</p>
                         </div>
-                        <img className="rounded-xl h-52 w-52 object-cover shadow-lg shadow-forest-mid/25"
+                        <img className="rounded-xl h-60 w-full object-cover shadow-lg shadow-forest-mid/25 md:h-52 md:w-52"
                              src="/images/Bewerbungsfoto.jpg"
                              alt="Resume Photo"/>
-
                     </div>
 
                     {/*  Resume  */}
-                    <div className="grid md:grid-cols-2 md:gap-20">
+                    <div className="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-20">
 
                         {/*  Details for resume entries  */}
                         <motion.div>
@@ -71,12 +69,12 @@ function About() {
                             <motion.div variants={cvContainer}
                                         initial="hidden"
                                         animate={isInView ? "visible" : "hidden"}
-                                        className="space-y-6  border-gradient-left pl-4">
+                                        className="mb-8 space-y-6 border-gradient-left pl-4">
                                 {about.cv.map(entry => (
                                     <motion.h4
                                         variants={cvItem}
                                         className="font-display font-bold text-forest hover:text-accent hover:cursor-pointer"
-                                        style={hoveredEntry === entry ? {color: "#E65180"} : {color: "#1F3329"}}
+                                        style={hoveredEntry === entry ? {color: "#D77A61"} : {color: "#1F3329"}}
                                         onMouseEnter={() => setHoveredEntry(entry)}
                                         onClick={() => setHoveredEntry(entry)}>
                                         {entry.title}
@@ -86,7 +84,7 @@ function About() {
                         </div>
                     </div>
                 </motion.div>
-            </section>
+            </AnimatedSection>
         </>
     );
 }

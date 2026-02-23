@@ -1,11 +1,12 @@
 import projects from "@/data/projects.js";
 import Headline2 from "@/components/typography/Headline2.jsx";
+import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
 
 function Projects() {
     return (
 
         <>
-            <section id="projects" className="relative min-h-screen flex items-center overflow-hidden">
+            <AnimatedSection id="projects">
                 <Headline2>Projects</Headline2>
                 {/*{projects.map(project => (*/}
                 {/*    <div>*/}
@@ -16,7 +17,7 @@ function Projects() {
 
                 {/*))}*/}
 
-            </section>
+            </AnimatedSection>
         </>
     );
 }
