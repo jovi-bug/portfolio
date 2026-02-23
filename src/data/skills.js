@@ -35,13 +35,6 @@ const skills = [
         category: "backend",
         icon: ""
 
-    },
-    {
-        id: "skills_node",
-        name: "Node.js",
-        category: "backend",
-        icon: ""
-
     }, {
         id: "skills_adobeCC",
         name: "Adobe Creative Cloud",

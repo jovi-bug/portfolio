@@ -36,7 +36,7 @@ function About() {
 
                     {/*  Introduction and Image */}
                     <Headline2>About</Headline2>
-                    <div className="flex flex-col-reverse gap-10 md:grid md:grid-cols-3 md:justify-between md:gap-20">
+                    <div className="flex flex-col-reverse gap-10 mb-8 md:grid md:grid-cols-3 md:justify-between md:gap-20">
                         <div className="col-span-2">
                             <p>{about.description}</p>
                         </div>
