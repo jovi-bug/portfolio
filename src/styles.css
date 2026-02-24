@@ -34,11 +34,12 @@
 
     /*--color-accent: #E65180;*/
     /*--color-accent-dark: #AE1948;*/
-
     --color-text-primary-dark: #070808;
     --color-text-primary-light: #EBEBEB;
 
     --radius: 0.75rem;
+
+    --shadow-custom-lg: 5px 3px 16px 3px rgba(74,90,82,0.15);
 
 }
 
@@ -51,6 +52,8 @@
         background-color: var(--color-bg-light);
         color: var(--color-text-primary-dark);
         font-family: 'Lato-Regular', 'sans-serif';
+        font-size: 1.1rem;
+
     }
 
     .font-display {
@@ -59,7 +62,6 @@
 
     p {
         line-height: 2;
-
     }
 }
 

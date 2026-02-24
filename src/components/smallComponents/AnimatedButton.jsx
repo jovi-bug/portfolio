@@ -11,7 +11,7 @@ const AnimatedButton = ({
 
     const baseClasses = "relative overflow-hidden rounded-full font-bold" +
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-forest " +
-        "bg-sage hover:bg-sage/60 shadow-lg shadow-forest-mid/25 cursor-pointer";
+        "bg-sage hover:bg-sage/60 shadow-custom-lg cursor-pointer";
 
     const sizeClasses = {
         sm: "px-4 py-2 text-sm",

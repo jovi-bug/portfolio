@@ -1,7 +1,7 @@
-const Headline2 = ({content = "Headline 3"}) => {
+const Headline2 = ({children}) => {
 
     return (
-        <h3 className="text-forest text-3xl font-extrabold font-display mb-4">{content}</h3>
+        <h3 className="text-forest text-3xl font-extrabold font-display mb-4">{children}</h3>
     )
 
 }

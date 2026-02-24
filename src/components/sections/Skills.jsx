@@ -13,21 +13,29 @@ const skillItem = {
     visible: {opacity: 1, y: 0}
 }
 
+
 function Skills() {
+
+    const ref = useRef(null)
+    const isInView = useInView(ref, {
+        once: true,
+        margin: "0px 100px -50px 0px"
+    })
 
     return (
         <AnimatedSection id="skills">
-            <div className="w-full">
+            <div className="w-full" ref={ref}>
                 <Headline2>Skills</Headline2>
                 <motion.div
                     variants={skillContainer}
                     initial="hidden"
-                    animate="visible"
-                    className="grid grid-cols-2 gap-4 md:grid-cols-5">
+                    animate={isInView ? "visible" : "hidden"}
+                    className="grid grid-cols-2 gap-8 lg:grid-cols-3 xl:grid-cols-4">
                     {skills.map((skill, count) => (
                         <motion.div key={skill.id}
-                             variants={skillItem}
-                             className="blur-bg-strong rounded-2xl h-10 shadow-md shadow-forest/25 flex items-center justify-center text-center">
+                                    variants={skillItem}
+
+                                    className="blur-bg-strong rounded-2xl h-14 shadow-custom-lg flex items-center justify-center text-center">
                             {skill.name}
                         </motion.div>
                     ))}

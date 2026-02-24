@@ -12,7 +12,7 @@ function Skills({id, children}) {
     })
     return (
         <motion.section id={id}
-                        className="min-h-screen flex items-center overflow-hidden mx-12 md:mx-60 pt-32 pb-20 relative z-10 space-y-16"
+                        className="min-h-screen flex items-center overflow-hidden mx-12 md:mx-60 pt-32 pb-20 relative z-10 space-y-16 overflow-visible"
                         ref={ref}
                         initial={{opacity: 0, y: 20}}
                         animate={isInView ? {opacity: 1, y: 0} : {opacity: 0, y: 20}}

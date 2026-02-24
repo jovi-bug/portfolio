@@ -1,24 +1,20 @@
 import projects from "@/data/projects.js";
 import Headline2 from "@/components/typography/Headline2.jsx";
 import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
+import ProjectCard from "@/components/layout/ProjectCard.jsx";
 
 function Projects() {
     return (
-
-        <>
-            <AnimatedSection id="projects">
+        <AnimatedSection id="projects">
+            <div>
                 <Headline2>Projects</Headline2>
-                {/*{projects.map(project => (*/}
-                {/*    <div>*/}
-                {/*        <h3>{project.name}</h3>*/}
-                {/*        <p>{project.description}</p>*/}
-
-                {/*    </div>*/}
-
-                {/*))}*/}
-
-            </AnimatedSection>
-        </>
+                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">
+                    {projects.map(project => (
+                        <ProjectCard contentObj={project}/>
+                    ))}
+                </div>
+            </div>
+        </AnimatedSection>
     );
 }
 

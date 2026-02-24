@@ -9,7 +9,7 @@ function AboutSection() {
         <AnimatedSection>
 
             <motion.div
-                className="container mx-10 md:mx-60 px-6 pt-32 pb-20 relative z-10 text-forest">
+                className="container pt-32 pb-20 relative z-10 text-forest">
                 <div>
                     {/* Stars */}
                     <Star

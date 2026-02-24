@@ -36,11 +36,12 @@ function About() {
 
                     {/*  Introduction and Image */}
                     <Headline2>About</Headline2>
-                    <div className="flex flex-col-reverse gap-10 mb-8 md:grid md:grid-cols-3 md:justify-between md:gap-20">
+                    <div
+                        className="flex flex-col-reverse gap-10 mb-8 md:grid md:grid-cols-3 md:justify-between md:gap-20">
                         <div className="col-span-2">
                             <p>{about.description}</p>
                         </div>
-                        <img className="rounded-xl h-60 w-full object-cover shadow-lg shadow-forest-mid/25 md:h-52 md:w-52"
+                        <img className="rounded-xl h-60 w-full object-cover shadow-custom-lg md:h-52 md:w-52"
                              src="/images/Bewerbungsfoto.jpg"
                              alt="Resume Photo"/>
                     </div>
@@ -57,7 +58,7 @@ function About() {
                                     animate={{opacity: 1, y: 0}}
                                     exit={{opacity: 0, y: 10}}
                                     transition={{duration: 0.3}}
-                                    className="blur-bg flex flex-col gap-2 p-6 min-h-52 justify-center rounded-xl shadow-forest-mid/25 shadow-lg">
+                                    className="blur-bg flex flex-col gap-2 p-6 min-h-52 justify-center rounded-xl shadow-custom-lg">
                                     <span className="block w-full">{hoveredEntry.period}</span>
                                     <h4 className="block w-full font-display font-bold text-forest hover:text-accent">{hoveredEntry.institution}</h4>
                                     <span className="block w-full">{hoveredEntry.description}</span>
