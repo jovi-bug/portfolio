@@ -2,7 +2,7 @@ import Headline2 from "@/components/typography/Headline2.jsx";
 import Headline3 from "@/components/typography/Headline3.jsx";
 import about from "@/data/about.js";
 import {useRef, useState} from "react";
-import {motion, useInView, AnimatePresence} from "framer-motion";
+import {motion, useInView} from "framer-motion";
 import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
 import skills from "@/data/skills.js";
 
