@@ -5,7 +5,7 @@ import ProjectCard from "@/components/layout/ProjectCard.jsx";
 
 function Projects() {
     return (
-        <AnimatedSection id="projects">
+        <AnimatedSection id="projects" className="min-h-screen">
             <div>
                 <Headline2>Projects</Headline2>
                 <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:grid-cols-3">

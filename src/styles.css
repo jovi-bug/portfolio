@@ -39,7 +39,7 @@
 
     --radius: 0.75rem;
 
-    --shadow-custom-lg: 5px 3px 16px 3px rgba(74,90,82,0.15);
+    --shadow-custom-lg: 5px 3px 16px 3px rgba(180, 199, 174, 0.15);
 
 }
 
@@ -73,9 +73,18 @@
     }
 
     .blur-bg-strong {
-        background-color: color-mix(in srgb, var(--color-bg-light-card) 80%, transparent);
+        background-color: color-mix(in srgb, var(--color-bg-light) 80%, transparent);
         backdrop-filter: blur(24px);
-        border: 1px solid color-mix(in srgb, var(--color-bg-light) 60%, transparent);
+        border: 1px solid color-mix(in srgb, white, transparent);
+        transition: scale 0.5s ease;
+    }
+
+    .blur-bg-strong:hover {
+        scale: 1.025;
+    }
+
+    .timeline-gradient {
+        background: linear-gradient(to bottom, #a2b39d, #a2b39d00);
     }
 
     .border-gradient-left {
@@ -90,7 +99,7 @@
         top: 0;
         height: 100%;
         width: 2px;
-        background: linear-gradient(to bottom, #4A5A52, #4A5A5200);
+        background: linear-gradient(to bottom, #a2b39d, #a2b39d00);
     }
 
 }

@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
 
 function AboutSection() {
     return (
-        <AnimatedSection>
+        <AnimatedSection className="min-h-screen">
 
             <motion.div
                 className="container pt-32 pb-20 relative z-10 text-forest">
@@ -25,9 +25,9 @@ function AboutSection() {
 
 
                     {/* Headline */}
-                    <h1 className="text-7xl font-display font-extrabold mb-1 md:text-8xl">Hi, I'm <span
+                    <h1 className="lg:text-9xl md:text-8xl text-7xl font-display font-extrabold mb-1 ">Hi, I'm <span
                         className=" text-accent">{about.name}</span></h1>
-                    <h2 className="font-display text-4xl md:text-5xl">and I'm a <span>{about.title}</span></h2>
+                    <h2 className="font-display  lg:text-6xl md:text-5xl text-4xl ">and I'm a <span>{about.title}</span></h2>
 
                     <Star
                         size={36}
@@ -36,10 +36,8 @@ function AboutSection() {
                     />
 
 
-                    {/* CTA AnimatedButton */}
-
-                    {/* TODO: Implement OnClick */}
-                    <AnimatedButton>Browse projects</AnimatedButton>
+                    {/* CTA Button to Projects */}
+                    <a href="#projects"><AnimatedButton>Browse projects</AnimatedButton></a>
                 </div>
             </motion.div>
 
