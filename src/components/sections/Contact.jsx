@@ -115,6 +115,7 @@ function Contact() {
                                         : <>Send Message <Send className="w-5 h-5"/></>}
                                 </AnimatedButton>
 
+
                             </form>
                         </div>
                     </div>
