@@ -107,6 +107,7 @@ function Contact() {
 
                                 <AnimatedButton
                                     size="lg"
+
                                     className="w-full flex justify-center items-center gap-2 text-forest font-bold font-display"
                                     type="submit"
                                     disabled={isLoading}>
