@@ -109,11 +109,10 @@ function Contact() {
                                     size="lg"
                                     className="w-full flex justify-center items-center gap-2 text-forest font-bold font-display"
                                     type="submit"
-                                    disabled={isLoading}>{isLoading
-                                    ? <>Sending Message...</>
-                                    : <>Send Message <Send className="w-5 h-5"/></>}
-
-
+                                    disabled={isLoading}>
+                                    {isLoading
+                                        ? <>Sending Message...</>
+                                        : <>Send Message <Send className="w-5 h-5"/></>}
                                 </AnimatedButton>
 
                             </form>
