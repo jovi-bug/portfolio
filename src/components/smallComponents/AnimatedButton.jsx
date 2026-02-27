@@ -1,13 +1,14 @@
 import {motion} from "framer-motion";
 
 const AnimatedButton = ({
-                    className = "",
-                    size = "default",
-                    children,
-                    type = "spring",
-                    stiffness = 150,
-                    damping = 20
-                }) => {
+                            className = "",
+                            size = "default",
+                            children,
+                            type = "spring",
+                            stiffness = 150,
+                            damping = 20,
+                            ...props
+                        }) => {
 
     const baseClasses = "relative overflow-hidden rounded-full font-bold" +
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-forest " +
@@ -23,6 +24,7 @@ const AnimatedButton = ({
 
     return (
         <motion.button
+            {...props}
             whileHover={{scale: 1.05, y: -2}}
             whileTap={{scale: 0.95, y: 1}}
             transition={{type: type, stiffness: stiffness, damping: damping}}
