@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero.jsx";
 import About from "@/components/sections/About.jsx";
 import Projects from "@/components/sections/Projects.jsx";
 import Contact from "@/components/sections/Contact.jsx";
+import {Footer} from "@/components/layout/Footer.jsx";
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                     <Projects></Projects>
                     <Contact></Contact>
                 </main>
+                <Footer/>
 
             </div>
         </>

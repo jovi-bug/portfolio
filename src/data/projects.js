@@ -7,7 +7,7 @@ const projects = [
         techStack: ["React", "Tailwind CSS", "Zustand", "JavaScript"],
         githubLink: "https://github.com/jovi-bug/cookie-calculator.git",
         isLive: true,
-        liveLink: "",
+        liveLink: "https://google.com",
         imgPath: "",
     }, {
         id: "project_2",
@@ -17,7 +17,7 @@ const projects = [
         techStack: ["Java", "JavaFx", "MariaDB"],
         githubLink: "https://github.com/jovi-bug/plantManager.git",
         isLive: false,
-        liveLink: "",
+        liveLink: "https://google.com",
         imgPath: "",
     },
 ]

@@ -11,7 +11,7 @@ function Skills({id, children, className = ""}) {
         margin: "0px 100px -50px 0px"
     })
 
-    const baseClasses = "flex items-center overflow-hidden mx-12 md:mx-60 pt-32 pb-20 relative z-10 space-y-16 overflow-visible";
+    const baseClasses = "flex items-center overflow-hidden mx-12 md:mx-30 lg:mx-60 pt-32 pb-20 relative z-10 space-y-16 overflow-visible";
 
 
     const classes = `${baseClasses} ${className}`;

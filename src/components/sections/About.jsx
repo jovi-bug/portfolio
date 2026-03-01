@@ -40,11 +40,11 @@ function About() {
                     {/*  Introduction and Image */}
                     <Headline2>About</Headline2>
                     <div
-                        className="flex flex-col-reverse gap-10 mb-8 md:grid md:grid-cols-3 md:justify-between md:gap-20">
+                        className="flex flex-col-reverse gap-10 mb-8 lg:grid lg:grid-cols-3 lg:justify-between lg:gap-20">
                         <div className="col-span-2">
                             <p>{about.description}</p>
                         </div>
-                        <img className="rounded-xl h-60 w-full object-cover shadow-custom-lg md:h-52 md:w-52"
+                        <img className="rounded-xl h-60 w-full object-cover shadow-custom-lg lg:h-52 lg:w-52"
                              src="/images/Bewerbungsfoto.jpg"
                              alt="Resume Photo"/>
                     </div>
@@ -70,7 +70,7 @@ function About() {
                                         className="absolute left-0 lg:left-1/2 top-0 w-3 h-3 bg-sage-shade rounded-full -translate-x-1/2 z-10"/>
 
                                     {/* Content */}
-                                    <div className={`ml-8 lg:ml-0 p-6 blur-bg-strong rounded-2xl mb-6
+                                    <div className={`ml-8 lg:ml-0 p-6 blur-bg-strong scaling-div rounded-2xl mb-6
                                     ${
                                         index % 2 === 0
                                             ? "lg:pr-16 lg:text-right"
@@ -86,53 +86,22 @@ function About() {
                         </div>
                     </motion.div>
 
-                    {/*<div className="flex flex-col-reverse md:grid md:grid-cols-2 md:gap-20">*/}
-                    {/*    /!*  Details for resume entries  *!/*/}
-                    {/*    <motion.div>*/}
-                    {/*        <AnimatePresence mode="wait">*/}
-                    {/*            {hoveredEntry && <motion.div*/}
-                    {/*                key={hoveredEntry.title}*/}
-                    {/*                initial={{opacity: 0, y: 10}}*/}
-                    {/*                animate={{opacity: 1, y: 0}}*/}
-                    {/*                exit={{opacity: 0, y: 10}}*/}
-                    {/*                transition={{duration: 0.3}}*/}
-                    {/*                className="blur-bg flex flex-col gap-2 p-6 min-h-52 justify-center rounded-xl shadow-custom-lg">*/}
-                    {/*                <span className="block w-full">{hoveredEntry.period}</span>*/}
-                    {/*                <h4 className="block w-full font-display font-bold text-forest hover:text-accent">{hoveredEntry.institution}</h4>*/}
-                    {/*                <span className="block w-full">{hoveredEntry.description}</span>*/}
-                    {/*            </motion.div>}*/}
-                    {/*        </AnimatePresence>*/}
-                    {/*    </motion.div>*/}
-                    {/*    <div>*/}
-                    {/*        <Headline3 content="Resume"></Headline3>*/}
-                    {/*        <motion.div variants={cvContainer}*/}
-                    {/*                    initial="hidden"*/}
-                    {/*                    animate={isInView ? "visible" : "hidden"}*/}
-                    {/*                    className="mb-8 space-y-6 border-gradient-left pl-4">*/}
-                    {/*            {about.cv.map(entry => (*/}
-                    {/*                <motion.h4*/}
-                    {/*                    variants={cvItem}*/}
-                    {/*                    className="font-display font-bold text-forest hover:text-accent hover:cursor-pointer"*/}
-                    {/*                    style={hoveredEntry === entry ? {color: "#D77A61"} : {color: "#1F3329"}}*/}
-                    {/*                    onMouseEnter={() => setHoveredEntry(entry)}*/}
-                    {/*                    onClick={() => setHoveredEntry(entry)}>*/}
-                    {/*                    {entry.title}*/}
-                    {/*                </motion.h4>*/}
-                    {/*            ))}*/}
-                    {/*        </motion.div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
 
                     {/* Skills */}
                     <div className="w-full">
                         <Headline3>Skills</Headline3>
                         <p></p>
                         <motion.div
-                            className="grid grid-cols-2 gap-8 lg:grid-cols-3 xl:grid-cols-4">
+                            className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
                             {/* TODO: Add Icons and skill level */}
                             {skills.map((skill) => (
                                 <motion.div key={skill.id}
-                                            className="blur-bg-strong rounded-2xl h-14 shadow-custom-lg flex items-center justify-center text-center">
+                                            className="blur-bg-strong text-base rounded-2xl h-14 shadow-custom-lg flex items-center justify-center text-center
+                                            hover:scale-105 transition-all duration-500 ease-in-out">
+                                    {skill.icon && <div>
+                                        <svg role="img" viewBox="0 0 24 24" className=" w-7 h-7 fill-sage mr-2"><title>{skill.name}</title>
+                                            <path d={skill.icon}/></svg>
+                                    </div>}
                                     {skill.name}
                                 </motion.div>
                             ))}
