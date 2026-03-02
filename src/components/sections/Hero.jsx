@@ -1,10 +1,11 @@
-import about from "@/data/about.js";
 import AnimatedButton from "@/components/smallComponents/AnimatedButton.jsx";
 import Star from "@/components/smallComponents/Star.jsx";
-import {motion} from "framer-motion"
 import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
+import {motion} from "framer-motion"
+import {useTranslation} from "react-i18next";
 
 function AboutSection() {
+    const {t} = useTranslation();
     return (
         <AnimatedSection className="min-h-screen">
 
@@ -25,9 +26,14 @@ function AboutSection() {
 
 
                     {/* Headline */}
-                    <h1 className="lg:text-9xl md:text-8xl text-7xl font-display font-extrabold mb-1 ">Hi, I'm <span
-                        className=" text-accent">{about.name}</span></h1>
-                    <h2 className="font-display  lg:text-6xl md:text-5xl text-4xl ">and I'm a <span>{about.title}</span></h2>
+                    <h1 className="lg:text-9xl md:text-8xl text-7xl font-display font-extrabold mb-1 ">
+                        {t("hero.greeting")}
+                        <span className=" text-accent"> {t("about.name")}</span>
+                    </h1>
+                    <h2 className="font-display  lg:text-6xl md:text-5xl text-4xl ">
+                        {t("hero.greeting2")}
+                        <span> {t("about.title")}</span>
+                    </h2>
 
                     <Star
                         size={36}
@@ -37,7 +43,7 @@ function AboutSection() {
 
 
                     {/* CTA Button to Projects */}
-                    <a href="#projects"><AnimatedButton>Browse projects</AnimatedButton></a>
+                    <a href="#projects"><AnimatedButton>{t("hero.buttonText")}</AnimatedButton></a>
                 </div>
             </motion.div>
 

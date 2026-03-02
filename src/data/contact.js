@@ -3,20 +3,38 @@ import {Mail, MapPin, Phone} from "lucide-react";
 const Contact = [
     {
         icon: Mail,
-        label: "Email",
-        value: "tjorvenielsen@icloud.com",
+        label: {
+            de: "E-Mail",
+            en: "Email",
+        },
+        value: {
+            de: "tjorvenielsen@icloud.com",
+            en: "tjorvenielsen@icloud.com"
+        },
         href: "mailto:tjorvenielsen@icloud.com",
     },
     {
         icon: Phone,
-        label: "Phone",
-        value: "+49 (0) 174 2585295",
+        label: {
+            de: "Telefon",
+            en: "Phone"
+        },
+        value: {
+            de: "+49 174 2585295",
+            en: "+49 174 2585295"
+        },
         href: "tel:+491742585295",
     },
     {
         icon: MapPin,
-        label: "Location",
-        value: "Flensburg, Germany",
+        label: {
+            de: "Ort",
+            en: "Location"
+        },
+        value: {
+            de: "Flensburg",
+            en: "Flensburg, Germany"
+        },
         href: "#",
     },
 ];

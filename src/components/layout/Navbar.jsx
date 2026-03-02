@@ -1,15 +1,18 @@
 import AnimatedButton from "@/components/smallComponents/AnimatedButton.jsx";
 import {Menu, X} from 'lucide-react'
 import {useState} from "react";
+import {useTranslation} from "react-i18next";
+import LanguageToggle from "@/components/layout/LanguageToggle.jsx";
 
 const Navbar = () => {
+    const {t} = useTranslation();
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navLinks = [
-        {href: "#about", label: "About"},
-        {href: "#projects", label: "Projects"},
-        {href: "#contact", label: "Contact"},
+        {href: "#about", label: t("nav.about")},
+        {href: "#projects", label: t("nav.projects")},
+        {href: "#contact", label: t("nav.contact")},
     ];
 
     return (
@@ -32,9 +35,9 @@ const Navbar = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="hidden md:block">
-                        <AnimatedButton size="sm">Contact Me</AnimatedButton>
-                    </div>
+
+                    {/*TODO Platzierung und Breakpoints anpassen*/}
+                    <div><LanguageToggle/></div>
 
                     {/* Mobile Menu AnimatedButton */}
                     <button onClick={() => setIsMobileMenuOpen((prev) => !prev)} className="md:hidden p-2 text-forest">
@@ -46,7 +49,7 @@ const Navbar = () => {
                 {/* Mobile Menu */}
                 {isMobileMenuOpen &&
                     (<div className="md:hidden">
-                        <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+                        <div className="container mx-auto px-12 py-6 flex flex-col gap-4">
                             {navLinks.map((link, index) => (
                                 <a key={index}
                                    href={link.href}
@@ -55,7 +58,6 @@ const Navbar = () => {
                                     {link.label}
                                 </a>
                             ))}
-                            <AnimatedButton className="min-w-40 w-1/4">Contact Me</AnimatedButton>
 
                         </div>
                     </div>)}

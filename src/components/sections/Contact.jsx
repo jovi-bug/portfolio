@@ -6,8 +6,11 @@ import contact from "@/data/contact.js";
 import {useState} from "react";
 import {AlertCircle, CheckCircle, Mail, MapPin, Phone, Send} from "lucide-react"
 import emailjs from "@emailjs/browser";
+import {useTranslation} from "react-i18next";
 
 function Contact() {
+    const {t} = useTranslation();
+    const {i18n} = useTranslation();
 
     const [formData, setFormData] = useState({
         name: "",
@@ -20,7 +23,6 @@ function Contact() {
         type: null,
         message: ""
     });
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -46,14 +48,14 @@ function Contact() {
 
             setSubmitStatus({
                 type: "success",
-                message: "Message successfully sent!"
+                message: t("contact.submitMessage")
             });
 
         } catch (error) {
             console.error(error);
             setSubmitStatus({
                 type: "error",
-                message: error.message || "Failed to send email, please try again later.",
+                message: error.message || t("contact.errorMessage"),
             })
 
         } finally {
@@ -63,18 +65,17 @@ function Contact() {
     }
 
     return (
-
         <>
             <AnimatedSection id="contact">
                 <div className="flex flex-col w-full">
-                    <Headline3>Get in touch</Headline3>
-                    <Headline2>Contact</Headline2>
+                    <Headline3>{t("contact.subhead")}</Headline3>
+                    <Headline2>{t("nav.contact")}</Headline2>
 
                     <div className="grid lg:grid-cols-2 gap-12 w-full">
 
                         {/* Contact Information */}
                         <div className="blur-bg-strong rounded-2xl p-6 ">
-                            <h4 className="text-forest text-xl font-display font-bold mb-8">Contact Information</h4>
+                            <h4 className="text-forest text-xl font-display font-bold mb-8">{t("contact.subheadInfo")}</h4>
 
                             {contact.map((entry, index) => (
                                 <div className="mb-4 scaling-div" key={index}>
@@ -85,8 +86,9 @@ function Contact() {
                                                 <entry.icon className="w-5 h-5 text-forest"/>
                                             </div>
                                             <div>
-                                                <div className="text-sm text-forest mb-0">{entry.label}</div>
-                                                <div>{entry.value}</div>
+                                                <div
+                                                    className="text-sm text-forest mb-0">{entry.label[i18n.language]}</div>
+                                                <div>{entry.value[i18n.language]}</div>
                                             </div>
                                         </div>
                                     </a>
@@ -101,19 +103,19 @@ function Contact() {
                                 <div>
                                     <label htmlFor="name"
                                            className="text-sm mb-3"
-                                    >Name </label>
+                                    >{t("contact.nameLabel")} </label>
                                     <input type="text"
                                            required
-                                           placeholder="Your name"
+                                           placeholder={t("contact.namePlaceholder")}
                                            onChange={(e) => setFormData({...formData, name: e.target.value})}
                                            className="w-full bg-sage/30 rounded-xl p-2 border-white focus:border-accent focus:ring-1 outline-none"/>
                                 </div>
 
                                 <div>
                                     <label htmlFor="email"
-                                           className="text-sm mb-3">Email </label>
+                                           className="text-sm mb-3">{t("contact.emailLabel")} </label>
                                     <input type="email"
-                                           placeholder="Your email address"
+                                           placeholder={t("contact.emailPlaceholder")}
                                            required
                                            onChange={(e) => setFormData({...formData, email: e.target.value})}
                                            className="w-full bg-sage/30 rounded-xl p-2 border-white focus:border-accent focus:ring-1 outline-none"/>
@@ -122,10 +124,10 @@ function Contact() {
                                 <div>
                                     <label htmlFor="message"
                                            className="text-sm mb-3"
-                                    >Name </label>
+                                    >{t("contact.messageLabel")}</label>
                                     <textarea
                                         rows={5}
-                                        placeholder="Your message"
+                                        placeholder={t("contact.messagePlaceholder")}
                                         required
                                         onChange={(e) => setFormData({...formData, message: e.target.value})}
                                         className="w-full bg-sage/30 rounded-xl p-2 border-white focus:border-accent focus:ring-1 outline-none resize-none "/>
@@ -140,7 +142,7 @@ function Contact() {
                                         <>Sending...</>
                                     ) : (
                                         <>
-                                            Send Message
+                                            {t("contact.buttonText")}
                                             <Send className="w-5 h-5"/>
                                         </>
                                     )}
