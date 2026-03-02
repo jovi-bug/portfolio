@@ -39,7 +39,7 @@ function About() {
                     {/*  Introduction and Image */}
                     <Headline2>{t("nav.about")}</Headline2>
 
-                    <div className="flex flex-col items-center justify-center gap-6">
+                    <div className="flex flex-col items-center justify-center gap-12">
 
                         <div
                             className="flex flex-col-reverse gap-10 mb-8 lg:grid lg:grid-cols-3 lg:justify-between lg:gap-20">

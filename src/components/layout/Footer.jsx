@@ -1,19 +1,27 @@
+import {useTranslation} from "react-i18next";
+import {Github, Linkedin} from "lucide-react";
 
-
-
-const footerLinks = [
-    {href: "#about", label: "About"},
-    {href: "#projects", label: "Projects"},
-    {href: "#contact", label: "Contact"},
-];
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const {t} = useTranslation();
+
+    const footerLinks = [
+        {href: "#about", label: t("nav.about")},
+        {href: "#projects", label: t("nav.projects")},
+        {href: "#contact", label: t("nav.contact")},
+    ];
+
+    //TODO Add URLs for scoial links
+    const socialLinks = [
+        {href: "#", label: "LinkedIn", icon: Linkedin},
+        {href: "#", label: "GitHub", icon: Github},
+    ]
 
     return (
-        <footer className="absolute w-full py-12 border-t border-border z-50">
+        <footer className="absolute w-full py-12 border-t border-border border-white z-50 bg-sage text-white">
             <div className="container mx-auto px-10">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-8">
                     {/* Logo & Copyright */}
                     <div className="text-center md:text-left">
                         <a href="#" className="text-xl text-forest font-display font-bold tracking-tight">
@@ -30,7 +38,7 @@ export const Footer = () => {
                             <a
                                 key={link.label}
                                 href={link.href}
-                                className="text-sm text-forest-mid hover:text-accent"
+                                className="text-sm text-forest hover:text-accent"
                             >
                                 {link.label}
                             </a>
@@ -38,18 +46,18 @@ export const Footer = () => {
                     </nav>
 
                     {/* Social Links */}
-                    {/*<div className="flex items-center gap-4">*/}
-                    {/*    {socialLinks.map((social) => (*/}
-                    {/*        <a*/}
-                    {/*            key={social.label}*/}
-                    {/*            href={social.href}*/}
-                    {/*            aria-label={social.label}*/}
-                    {/*            className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"*/}
-                    {/*        >*/}
-                    {/*            <social.icon className="w-5 h-5" />*/}
-                    {/*        </a>*/}
-                    {/*    ))}*/}
-                    {/*</div>*/}
+                    <div className="flex justify-center md:justify-end gap-4">
+                        {socialLinks.map((social) => (
+                            <a
+                                key={social.label}
+                                href={social.href}
+                                aria-label={social.label}
+                                className="p-2 rounded-full bg-bg-light-card hover:bg-white hover:text-accent transition-all"
+                            >
+                                <social.icon className="w-5 h-5 text-forest" />
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </div>
         </footer>

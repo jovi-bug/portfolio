@@ -18,7 +18,7 @@ const de = {
         subheadSkills: "Fähigkeiten"
     },
     contact: {
-        subhead: "Kontakt aufnehmen",
+        subhead: "Lassen Sie uns reden!",
         subheadInfo: "Kontaktinformationen",
         submitMessage: "Nachricht erfolgreich gesendet!",
         errorMessage: "E-Mail konnte nicht gesendet werden, bitte versuche es später erneut.",

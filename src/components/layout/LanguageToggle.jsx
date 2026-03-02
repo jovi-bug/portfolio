@@ -17,12 +17,12 @@ const LanguageToggle = () => {
     return (
         <button
             onClick={toggle}
-            className="flex items-center gap-1 px-3 py-1 rounded-full border border-neutral-400 text-sm font-medium transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800"
+            className="flex items-center gap-1 px-3 py-1 rounded-full border border-forest-mid text-sm font-medium transition-colors hover:bg-sage/50"
             aria-label="Toggle language"
         >
-            <span className={isDE ? "opacity-100" : "opacity-40"}>DE</span>
-            <span className="text-neutral-400">/</span>
-            <span className={!isDE ? "opacity-100" : "opacity-40"}>EN</span>
+            <span className={isDE ? "text-accent" : "text-forest-mid"}>DE</span>
+            <span className="text-forest-mid">/</span>
+            <span className={!isDE ? "text-accent" : "text-forest-mid"}>EN</span>
         </button>
     );
 }
