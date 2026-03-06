@@ -37,16 +37,19 @@ function About() {
                             transition={{duration: 0.8, ease: "easeOut"}}>
 
                     {/*  Introduction and Image */}
-                    <Headline2>{t("nav.about")}</Headline2>
+                    <Headline2>{t("about.headline")}</Headline2>
+
 
                     <div className="flex flex-col items-center justify-center gap-12">
 
                         <div
                             className="flex flex-col-reverse gap-10 mb-8 lg:grid lg:grid-cols-3 lg:justify-between lg:gap-20">
                             <div className="col-span-2">
-                                <p>{t("about.description")}</p>
+                                <h4 className="text-xl text-forest font-bold">{t("about.subheadline")}</h4>
+                                <br/>
+                                <p className="whitespace-pre-line">{t("about.description")}</p>
                             </div>
-                            <img className="rounded-xl h-60 w-full object-cover shadow-custom-lg lg:h-52 lg:w-52"
+                            <img className="rounded-xl h-60 w-full object-cover shadow-custom-lg lg:h-60 lg:w-60"
                                  src="/images/Bewerbungsfoto.jpg"
                                  alt="Resume Photo"/>
                         </div>
@@ -60,28 +63,28 @@ function About() {
                             <Headline3>{t("about.subheadCV")}</Headline3>
                             <div className="relative">
                                 <div
-                                    className="absolute timeline-gradient left-0 lg:left-1/2 top-0 bottom-0 w-0.5 lg:-translate-x-1/2"/>
+                                    className="absolute timeline-gradient left-0 xl:left-1/2 top-0 bottom-0 w-0.5 xl:-translate-x-1/2"/>
 
                                 {cv.map((item, index) => (
                                     <motion.div
                                         variants={cvItem}
                                         key={item.id}
-                                        className="relative grid lg:grid-cols-2 gap-12">
+                                        className="relative grid xl:grid-cols-2 gap-12">
                                         {/* Dot */}
                                         <div
-                                            className="absolute left-0 lg:left-1/2 top-0 w-3 h-3 bg-sage-shade rounded-full -translate-x-1/2 z-10"/>
+                                            className="absolute left-0 xl:left-1/2 top-0 w-3 h-3 bg-sage-shade rounded-full -translate-x-1/2 z-10"/>
 
                                         {/* Content */}
-                                        <div className={`ml-8 lg:ml-0 p-6 blur-bg-strong scaling-div rounded-2xl mb-6
+                                        <div className={`ml-8 xl:ml-0 p-6 blur-bg-strong scaling-div rounded-2xl mb-6
                                     ${
                                             index % 2 === 0
-                                                ? "lg:pr-16 lg:text-right"
-                                                : "lg:col-start-2 lg:pl-16"
+                                                ? "xl:pr-16 xl:text-right"
+                                                : "xl:col-start-2 xl:pl-16"
                                         }`}>
-                                            <span className="text-sm ">{item.period[i18n.language]}</span>
-                                            <h4 className=" font-display font-bold text-forest hover:text-accent">{item.title[i18n.language]}</h4>
-                                            <span className="text-sm ">{item.institution}</span>
-                                            <p className="text-base">{item.description[i18n.language]}</p>
+                                            <span className="text-sm">{item.period[i18n.language]}</span>
+                                            <h4 className="text-xl font-display font-bold text-forest">{item.title[i18n.language]}</h4>
+                                            <span className="text-sm text-forest-mid">{item.institution}</span>
+                                            <p className="text-base whitespace-pre-line">{item.description[i18n.language]}</p>
                                         </div>
                                     </motion.div>
                                 ))}
@@ -92,7 +95,7 @@ function About() {
                             <Headline3>{t("about.subheadSkills")}</Headline3>
                             <p></p>
                             <motion.div
-                                className="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-3">
+                                className="grid gap-8 grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
                                 {/* TODO: Add Icons and skill level */}
                                 {skills.map((skill) => (
                                     <motion.div key={skill.id}

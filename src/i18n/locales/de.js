@@ -12,13 +12,18 @@ const de = {
     about: {
         name: "Tjorve",
         lastName: "Nielsen",
-        title: "Frontend Developerin",
-        description: "Ich bin ein Frontend-Entwicklerin aus Norddeutschland. Mein Ziel ist es, schnelle, moderne und schöne Webseiten sowie Web-Apps zu erstellen. Ich habe einen Hintergrund im Grafikdesign und befinde mich derzeit auf dem Weg, ein Full-Stack-Entwickler zu werden.",
+        title: "Frontend-Entwicklerin",
+        headline: "Das bin ich",
+        subheadline: "Frontend-Entwicklerin mit Fokus auf React, TypeScript und nutzerzentrierte Webanwendungen.",
+        description: "Als Medieninformatikerin mit fünf Jahren Berufserfahrung im gestalterischen Umfeld verbinde ich technisches Verständnis mit einem geschulten Blick für Nutzerführung und grafische Details. Sauberer, wartbarer Code ist mir genauso wichtig wie nutzerzentrierte und visuell ansprechende Benutzeroberflächen.\n\n"+
+            "Nach mehreren Jahren im Printbereich habe ich mich bewusst wieder auf die Entwicklung interaktiver Webanwendungen konzentriert. Mein aktueller Schwerpunkt liegt im Frontend mit React, TypeScript und modernen Styling-Lösungen wie Tailwind CSS. Besonders reizt mich die Schnittstelle zwischen Gestaltung, Nutzererlebnis und technischer Umsetzung.\n\n"+
+            "Perspektivisch möchte ich meine Kenntnisse im Backend weiter ausbauen, um Anwendungen ganzheitlich verstehen und entwickeln zu können."
+        ,
         subheadCV: "Lebenslauf",
-        subheadSkills: "Fähigkeiten"
+        subheadSkills: "Tech Stack"
     },
     contact: {
-        subhead: "Lassen Sie uns reden!",
+        subhead: "Let's get in Touch!",
         subheadInfo: "Kontaktinformationen",
         submitMessage: "Nachricht erfolgreich gesendet!",
         errorMessage: "E-Mail konnte nicht gesendet werden, bitte versuche es später erneut.",

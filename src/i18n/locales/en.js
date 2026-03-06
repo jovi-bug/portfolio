@@ -13,9 +13,14 @@ const en = {
         name: "Tjorve",
         lastName: "Nielsen",
         title: "Frontend Developer",
-        description: "I'm a Frontend Developer based in northern Germany. I strive to build quick, modern and beautiful websites and web apps. I have a background in graphic design and I am currently on a journey to become a full stack developer.",
+        headline: "About Me",
+        subheadline: "Frontend developer with a focus on React, TypeScript, and user-centered web applications.",
+        description: "As a media computer scientist with five years of professional experience in a design-oriented environment, I combine technical understanding with a trained eye for user guidance and graphic details. Clean, maintainable code is just as important to me as user-centered and visually appealing user interfaces.\n\n"+
+            "After several years in the print sector, I consciously refocused on the development of interactive web applications. My current focus lies in frontend development with React, TypeScript, and modern styling solutions such as Tailwind CSS. I am particularly interested in the intersection of design, user experience, and technical implementation.\n\n"+
+            "Looking ahead, I want to further expand my backend knowledge in order to better understand and develop applications holistically."
+        ,
         subheadCV: "Resume",
-        subheadSkills: "Skills"
+        subheadSkills: "Tech Stack"
     },
     contact: {
         subhead: "Get in touch",

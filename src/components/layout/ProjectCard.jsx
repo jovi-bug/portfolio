@@ -48,8 +48,8 @@ const ProjectCard = ({project}) => {
                     <div className="w-full">
                         <hr className="border-forest-mid mb-4"/>
 
-                        <div className="flex gap-4 w-full items-center">
-                            {project.liveLink && project.isLive && <div className="flex gap-2 items-center">
+                        <div className="flex gap-8 w-full items-center">
+                            {project.liveLink && project.isLive && <div className="flex gap-1 items-center">
                                 <ArrowUpRight className="w-5 h-5 text-forest-mid"/>
 
                                 <a href={project.liveLink}
@@ -58,7 +58,7 @@ const ProjectCard = ({project}) => {
                                     Live
                                 </a>
                             </div>}
-                            {project.githubLink && <div className="flex gap-2 items-center">
+                            {project.githubLink && <div className="flex gap-1 items-center">
                                 <svg role="img" viewBox="0 0 24 24" className="w-5 h-5 fill-forest-mid">
                                     <title>GitHub</title>
                                     <path

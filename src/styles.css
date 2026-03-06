@@ -46,13 +46,14 @@
 @layer base {
     html {
         scroll-behavior: smooth;
+        /*background-color: var(--color-bg-light);*/
     }
 
     body {
         background-color: var(--color-bg-light);
         color: var(--color-text-primary-dark);
         font-family: 'Lato-Regular', 'sans-serif';
-        font-size: 1.1rem;
+        font-size: 1rem;
 
     }
 

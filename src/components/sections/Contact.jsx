@@ -68,8 +68,8 @@ function Contact() {
         <>
             <AnimatedSection id="contact">
                 <div className="flex flex-col w-full">
-                    <Headline3>{t("contact.subhead")}</Headline3>
                     <Headline2>{t("nav.contact")}</Headline2>
+                    <h4 className="text-xl text-forest font-bold mb-8">{t("contact.subhead")}</h4>
 
                     <div className="grid lg:grid-cols-2 gap-12 w-full">
 
