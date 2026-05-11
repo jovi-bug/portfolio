@@ -20,7 +20,7 @@ const Navbar = () => {
             <div className="blur-bg py-5">
                 <nav className="container mx-auto px-12 flex items-center justify-between">
                     <a href="#"
-                       className="text-forest-mid font-display font-bold text-xl tracking-tight hover:text-accent transition-all">
+                       className="text-forest-mid font-display font-bold text-2xl tracking-tight hover:text-accent transition-all">
                         TN<span className="text-forest-mid">.</span>
                     </a>
 
@@ -36,7 +36,6 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/*TODO Platzierung und Breakpoints anpassen*/}
                     <div><LanguageToggle/></div>
 
                     {/* Mobile Menu AnimatedButton */}

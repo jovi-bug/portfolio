@@ -2,36 +2,20 @@ const projects = [
     {
         id: "project_1",
         name: {
-            de: "Cookie Calculator",
-            en: "Cookie Calculator"
+            de: "Website Sommerbrücke Flensburg",
+            en: "Website Sommerbrücke Flensburg"
         },
         description: {
-            de: "Eine Web-App, die dir hilft, beim Backen die richtige Menge an Zutaten zu berechnen. Durchstöbere Rezepte, füge sie deiner Backliste hinzu, stelle den Multiplikator ein – und voilà: Deine Einkaufsliste ist fertig und hat bereits berechnet, wie viele Packungen du von jeder Zutat benötigst.",
-            en: "A web app to help you calculate the right amount of ingredients when baking. Browse recipes, add them to your baking list, set a multiplier, and voilà: your shopping list is ready and already calculates how many packages of each ingredient you need."
+            de: "Landing Page für eine lokale Bürgerinitiative in Flensburg. Statische One-Pager-Website mit Bootstrap 5 und vanilla JavaScript für einfache Interaktivität",
+            en: "Landing page for a local citizens' initiative in Flensburg. Static one-pager built with Bootstrap 5 and vanilla JavaScript for basic interactivity."
         },
-        date: new Date(2026, 2, 23),
-        techStack: ["React", "Tailwind CSS", "Zustand", "JavaScript"],
-        githubLink: "https://github.com/jovi-bug/cookie-calculator.git",
+        date: new Date(2026, 5, 9),
+        techStack: ["HTML", "CSS", "JavaScript","Bootstrap"],
+        githubLink: "https://github.com/jovi-bug/Website-Sommerbruecke",
         isLive: true,
-        liveLink: "https://google.com",
-        imgPath: "",
-    }, {
-        id: "project_2",
-        name: {
-            de: "Plant Manager",
-            en: "Plant Manager"
-        },
-        description: {
-            de: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis p",
-            en: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis p"
-        },
-        date: new Date(2025, 12, 15),
-        techStack: ["Java", "JavaFx", "MariaDB"],
-        githubLink: "https://github.com/jovi-bug/plantManager.git",
-        isLive: false,
-        liveLink: "https://google.com",
-        imgPath: "",
-    },
+        liveLink: "https://sommerbruecke-flensburg.de/",
+        imgPath: "images/sommerbruecke-desktop.png",
+    }
 ]
 
 export default projects;

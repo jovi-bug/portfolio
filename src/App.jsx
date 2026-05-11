@@ -5,6 +5,7 @@ import About from "@/components/sections/About.jsx";
 import Projects from "@/components/sections/Projects.jsx";
 import Contact from "@/components/sections/Contact.jsx";
 import {Footer} from "@/components/layout/Footer.jsx";
+import ScrollToTop from "@/components/layout/ScrollToTop.jsx";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                     <Contact></Contact>
                 </main>
                 <Footer/>
+                <ScrollToTop />
 
             </div>
         </>

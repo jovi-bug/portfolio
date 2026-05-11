@@ -1,16 +1,14 @@
 import Headline2 from "@/components/typography/Headline2.jsx";
 import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
-import Headline3 from "@/components/typography/Headline3.jsx";
 import AnimatedButton from "@/components/smallComponents/AnimatedButton.jsx";
-import contact from "@/data/contact.js";
 import {useState} from "react";
-import {AlertCircle, CheckCircle, Mail, MapPin, Phone, Send} from "lucide-react"
+import {AlertCircle, CheckCircle, Send} from "lucide-react"
 import emailjs from "@emailjs/browser";
 import {useTranslation} from "react-i18next";
+import {motion} from "framer-motion";
 
 function Contact() {
     const {t} = useTranslation();
-    const {i18n} = useTranslation();
 
     const [formData, setFormData] = useState({
         name: "",
@@ -67,42 +65,23 @@ function Contact() {
     return (
         <>
             <AnimatedSection id="contact">
-                <div className="flex flex-col w-full">
+                <motion.div
+                    initial={{opacity: 0, y: 20}}
+                    whileInView={{opacity: 1, y: 0}}
+                    viewport={{once: true, amount: 0.1}}
+                    transition={{duration: 0.8, ease: "easeOut"}}
+                    className="flex flex-col w-full">
                     <Headline2>{t("nav.contact")}</Headline2>
                     <h4 className="text-xl text-forest font-bold mb-8">{t("contact.subhead")}</h4>
 
                     <div className="grid lg:grid-cols-2 gap-12 w-full">
-
-                        {/* Contact Information */}
-                        <div className="blur-bg-strong rounded-2xl p-6 ">
-                            <h4 className="text-forest text-xl font-display font-bold mb-8">{t("contact.subheadInfo")}</h4>
-
-                            {contact.map((entry, index) => (
-                                <div className="mb-4 scaling-div" key={index}>
-                                    <a href={entry.link} className="hover:cursor-pointer">
-                                        <div className="flex w-full gap-4 items-center ">
-                                            <div
-                                                className="w-12 h-12 rounded-xl bg-sage/30 flex items-center justify-center">
-                                                <entry.icon className="w-5 h-5 text-forest"/>
-                                            </div>
-                                            <div>
-                                                <div
-                                                    className="text-sm text-forest mb-0">{entry.label[i18n.language]}</div>
-                                                <div>{entry.value[i18n.language]}</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            ))}
-                        </div>
-
                         <div className="blur-bg-strong rounded-2xl p-6">
                             <form className="space-y-6"
                                   onSubmit={handleSubmit}>
 
                                 <div>
                                     <label htmlFor="name"
-                                           className="text-sm mb-3"
+                                           className="mb-3 pl-1"
                                     >{t("contact.nameLabel")} </label>
                                     <input type="text"
                                            required
@@ -113,7 +92,7 @@ function Contact() {
 
                                 <div>
                                     <label htmlFor="email"
-                                           className="text-sm mb-3">{t("contact.emailLabel")} </label>
+                                           className="mb-3 pl-1">{t("contact.emailLabel")} </label>
                                     <input type="email"
                                            placeholder={t("contact.emailPlaceholder")}
                                            required
@@ -123,7 +102,7 @@ function Contact() {
 
                                 <div>
                                     <label htmlFor="message"
-                                           className="text-sm mb-3"
+                                           className=" mb-3 pl-1"
                                     >{t("contact.messageLabel")}</label>
                                     <textarea
                                         rows={5}
@@ -169,7 +148,7 @@ function Contact() {
 
 
                     </div>
-                </div>
+                </motion.div>
 
             </AnimatedSection>
         </>

@@ -5,14 +5,13 @@ import {useTranslation} from "react-i18next";
 const ProjectCard = ({project}) => {
     const {i18n} = useTranslation();
 
-    // TODO Bei Hover über Karte nur das Bild reinzoomen
     return (
         <motion.div className="scaling-div blur-bg-strong shadow-custom-lg rounded-lg min-h-100 ">
             <div className="flex flex-col w-full h-full items-end justify-between">
 
                 <img src={project.imgPath ? project.imgPath : '/images/placeholder.jpg'}
                      alt={`Screenshot for ${project.name[i18n.language]}`}
-                     className="w-full max-h-48 object-cover object-center rounded-lg"/>
+                     className="w-full max-h-48 object-cover object-top rounded-lg"/>
 
 
                 <div className="p-4 flex flex-col gap-4 ">

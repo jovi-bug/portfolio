@@ -12,20 +12,18 @@ const en = {
     about: {
         name: "Tjorve",
         lastName: "Nielsen",
-        title: "Frontend Developer",
+        title: "Web Developer",
         headline: "About Me",
-        subheadline: "Frontend developer with a focus on React, TypeScript, and user-centered web applications.",
-        description: "As a media computer scientist with five years of professional experience in a design-oriented environment, I combine technical understanding with a trained eye for user guidance and graphic details. Clean, maintainable code is just as important to me as user-centered and visually appealing user interfaces.\n\n"+
-            "After several years in the print sector, I consciously refocused on the development of interactive web applications. My current focus lies in frontend development with React, TypeScript, and modern styling solutions such as Tailwind CSS. I am particularly interested in the intersection of design, user experience, and technical implementation.\n\n"+
-            "Looking ahead, I want to further expand my backend knowledge in order to better understand and develop applications holistically."
-        ,
+        subheadline: "Frontend Developer with a Background in Design – Focused on React, TypeScript and UX.",
+        description: "As a Media Informatics graduate with a background in graphic design, I bring technical know-how and a strong sense for UX and visual design. To me, the two go hand in hand – good software looks good and feels good.\n" +
+            "After several years in design, I made a deliberate move back into development and deepened my skills through an intensive training program. Today my focus is on frontend development: React, TypeScript, JavaScript and modern styling solutions like Tailwind CSS. Long-term, I want to grow on the backend side as well – with the goal of shaping web applications from concept to completion.",
         subheadCV: "Resume",
         subheadSkills: "Tech Stack"
     },
     contact: {
         subhead: "Get in touch",
         subheadInfo: "Contact information",
-        submitMessage:"Message successfully sent!",
+        submitMessage: "Message successfully sent!",
         errorMessage: "Failed to send email, please try again later.",
         nameLabel: "Name",
         namePlaceholder: "Your Name",

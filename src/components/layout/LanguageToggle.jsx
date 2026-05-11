@@ -1,6 +1,5 @@
 import {useTranslation} from "react-i18next";
 
-//TODO Styling anpassen
 const LanguageToggle = () => {
     const {i18n} = useTranslation();
     const isDE = i18n.language === "de";
@@ -8,7 +7,6 @@ const LanguageToggle = () => {
     const toggle = () => {
         const lang = isDE ? "en" : "de";
 
-        console.log("Sprache gewechselt zu: ", lang)
         i18n.changeLanguage(lang).catch(console.error);
 
         localStorage.setItem("lang", lang); // Auswahl speichern

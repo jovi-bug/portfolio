@@ -12,13 +12,11 @@ const de = {
     about: {
         name: "Tjorve",
         lastName: "Nielsen",
-        title: "Frontend-Entwicklerin",
+        title: "Web-Entwicklerin",
         headline: "Das bin ich",
-        subheadline: "Frontend-Entwicklerin mit Fokus auf React, TypeScript und nutzerzentrierte Webanwendungen.",
-        description: "Als Medieninformatikerin mit fünf Jahren Berufserfahrung im gestalterischen Umfeld verbinde ich technisches Verständnis mit einem geschulten Blick für Nutzerführung und grafische Details. Sauberer, wartbarer Code ist mir genauso wichtig wie nutzerzentrierte und visuell ansprechende Benutzeroberflächen.\n\n"+
-            "Nach mehreren Jahren im Printbereich habe ich mich bewusst wieder auf die Entwicklung interaktiver Webanwendungen konzentriert. Mein aktueller Schwerpunkt liegt im Frontend mit React, TypeScript und modernen Styling-Lösungen wie Tailwind CSS. Besonders reizt mich die Schnittstelle zwischen Gestaltung, Nutzererlebnis und technischer Umsetzung.\n\n"+
-            "Perspektivisch möchte ich meine Kenntnisse im Backend weiter ausbauen, um Anwendungen ganzheitlich verstehen und entwickeln zu können."
-        ,
+        subheadline: "Frontend-Entwicklerin mit Hintergrund im Design – Fokus auf React, TypeScript und UX",
+        description: "Als Medieninformatikerin mit Hintergrund im grafischen Design bringe ich technisches Know-how und ein Gespür für UX und visuelles Design zusammen. Für mich gehört beides zusammen – gute Software sieht gut aus und fühlt sich gut an.\n" +
+            "Nach mehreren Jahren im Design-Umfeld habe ich mich bewusst wieder der Entwicklung zugewandt und meine Skills in einer Intensiv-Weiterbildung vertieft. Heute liegt mein Schwerpunkt im Frontend: React, TypeScript, JavaScript und moderne Styling-Lösungen wie Tailwind CSS. Langfristig möchte ich auch im Backend wachsen – mit dem Ziel, Webanwendungen von der Idee bis zur Umsetzung vollständig begleiten zu können.",
         subheadCV: "Lebenslauf",
         subheadSkills: "Tech Stack"
     },
