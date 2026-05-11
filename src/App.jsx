@@ -1,15 +1,14 @@
-import '@/styles.css'
-import Navbar from "@/components/layout/Navbar.jsx";
-import Hero from "@/components/sections/Hero.jsx";
-import About from "@/components/sections/About.jsx";
-import Projects from "@/components/sections/Projects.jsx";
-import Contact from "@/components/sections/Contact.jsx";
-import {Footer} from "@/components/layout/Footer.jsx";
-import ScrollToTop from "@/components/layout/ScrollToTop.jsx";
+import '@/styles.css';
+import Navbar from '@/components/layout/Navbar.jsx';
+import Hero from '@/components/sections/Hero.jsx';
+import About from '@/components/sections/About.jsx';
+import Projects from '@/components/sections/Projects.jsx';
+import Contact from '@/components/sections/Contact.jsx';
+import { Footer } from '@/components/layout/Footer.jsx';
+import ScrollToTop from '@/components/layout/ScrollToTop.jsx';
 
 function App() {
     return (
-
         <>
             <div
                 className="fixed inset-0"
@@ -24,17 +23,15 @@ function App() {
                 }}
             />
             <div className="min-h-screen overflow-x-hidden">
-
-                <Navbar/>
+                <Navbar />
                 <main>
-                    <Hero></Hero>
-                    <About></About>
-                    <Projects></Projects>
-                    <Contact></Contact>
+                    <Hero />
+                    <About />
+                    <Projects />
+                    <Contact />
                 </main>
-                <Footer/>
+                <Footer />
                 <ScrollToTop />
-
             </div>
         </>
     );

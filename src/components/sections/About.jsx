@@ -1,10 +1,11 @@
-import Headline2 from "@/components/typography/Headline2.jsx";
-import Headline3 from "@/components/typography/Headline3.jsx";
-import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
-import cv from "@/data/cv.js";
-import skills from "@/data/skills.js";
-import {motion} from "framer-motion";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+
+import AnimatedSection from '@/components/layout/AnimatedSection.jsx';
+import Headline2 from '@/components/typography/Headline2.jsx';
+import Headline3 from '@/components/typography/Headline3.jsx';
+import cv from '@/data/cv.js';
+import skills from '@/data/skills.js';
 
 //Variants for CV animations
 const cvItem = {

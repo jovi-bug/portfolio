@@ -1,6 +1,7 @@
-import Headline2 from "@/components/typography/Headline2.jsx";
-import {motion, useInView, AnimatePresence} from "framer-motion";
-import {useRef} from "react";
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+
+import Headline2 from '@/components/typography/Headline2.jsx';
 
 function AnimatedSection({id, children, className = ""}) {
 

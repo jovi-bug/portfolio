@@ -13,8 +13,8 @@ const cv =
             },
             description: {
                 de: "6-monatige Intensiv-Weiterbildung in moderner Webentwicklung – Frontend (React, TypeScript, JavaScript) und Backend (Java, PHP, MySQL), mit Schwerpunkt auf der Konzeption und Umsetzung vollständiger Webanwendungen.",
-                en: "6-month intensive training program in modern web development – frontend (React, TypeScript, JavaScript) and backend (Java, PHP, MySQL), with a focus on designing and b…6-month intensive bootcamp in modern web development – frontend (React, TypeScript, JavaScript) and backend (Java, PHP, MySQL), with a focus on designing and building complete web applications."            },
-            type: "education"
+                en: "6-month intensive training program in modern web development – frontend (React, TypeScript, JavaScript) and backend (Java, PHP, MySQL), with a focus on designing and building complete web applications."
+            }
         },
         {
             id: "cv_3",
@@ -30,8 +30,7 @@ const cv =
             description: {
                 de: "Print-Design in einer hauseigenen Werbeagentur – Kataloge, Anzeigen, Plakate, POS- und Messematerialien. Seit Mai 2020 stellv. Teamleitung mit Verantwortung für Koordination, Projektabstimmung und abteilungsübergreifende Kommunikation.",
                 en: "Print design at an in-house advertising agency – catalogues, ads, posters, POS and trade show materials. Since May 2020 deputy team lead of the design department, responsible for task coordination, project alignment and cross-departmental communication."
-            },
-            type: "work"
+            }
         },
         {
             id: "cv_1",
@@ -47,8 +46,7 @@ const cv =
             description: {
                 de: "Studium der Medieninformatik mit Fokus auf digitale Anwendungen an der Schnittstelle von Informatik und Gestaltung – Webentwicklung, HCI und interaktive Medien.",
                 en: "Bachelor's degree in Media Informatics, focusing on digital application design and development at the intersection of computer science and design – web development, HCI and interactive media."
-            },
-            type: "education"
+            }
         },
         {
             id: "cv_2",
@@ -64,8 +62,7 @@ const cv =
             description: {
                 de: "Bildverwaltung & Qualitätssicherung nach CX-Richtlinien – Bildbearbeitung und Asset-Pflege im DAM-System.",
                 en: "Image management & quality assurance according to CX guidelines – image editing and asset maintenance in the DAM system."
-            },
-            type: "work"
+            }
         }
     ]
 

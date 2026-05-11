@@ -1,9 +1,10 @@
-import AnimatedButton from "@/components/smallComponents/AnimatedButton.jsx";
-import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
-import {motion} from "framer-motion"
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
-function AboutSection() {
+import AnimatedSection from '@/components/layout/AnimatedSection.jsx';
+import AnimatedButton from '@/components/smallComponents/AnimatedButton.jsx';
+
+function Hero() {
     const {t} = useTranslation();
 
     const titleText = `${t("hero.greeting")} ${t("about.name")}`;
@@ -76,4 +77,4 @@ function AboutSection() {
     );
 }
 
-export default AboutSection;
+export default Hero;

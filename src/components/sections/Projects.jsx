@@ -1,9 +1,10 @@
-import projects from "@/data/projects.js";
-import Headline2 from "@/components/typography/Headline2.jsx";
-import AnimatedSection from "@/components/layout/AnimatedSection.jsx";
-import ProjectCard from "@/components/layout/ProjectCard.jsx";
-import {useTranslation} from "react-i18next";
-import {motion} from "framer-motion";
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+
+import AnimatedSection from '@/components/layout/AnimatedSection.jsx';
+import ProjectCard from '@/components/layout/ProjectCard.jsx';
+import Headline2 from '@/components/typography/Headline2.jsx';
+import projects from '@/data/projects.js';
 
 function Projects() {
     const {t} = useTranslation();
