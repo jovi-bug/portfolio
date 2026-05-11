@@ -32,7 +32,6 @@ function Contact() {
             const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
             const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
             const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-            console.log(serviceId, templateId, publicKey);
 
             if (!serviceId || !templateId || !publicKey) {
                 throw new Error("EMailJS configuration is missing. Please check your environment variables.");

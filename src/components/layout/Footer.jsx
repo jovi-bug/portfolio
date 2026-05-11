@@ -26,7 +26,7 @@ export const Footer = () => {
     ]
 
     return (
-        <footer className="absolute w-full py-12 border-t border-border border-white z-50 bg-sage text-white">
+        <footer className="absolute w-full py-6 border-t border-border border-white z-50 bg-sage text-white">
             <div className="container mx-auto px-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-8">
                     {/* Logo & Copyright */}

@@ -39,28 +39,30 @@ function AboutSection() {
 
                     {/* Headline */}
                     <motion.h1
+                        key={titleText}
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
                         className="lg:text-8xl md:text-7xl text-6xl font-display font-extrabold mb-1 ">
                         {titleText.split("").map((char, index) => (
                             <motion.span
-                                key={index}
+                                key={`${titleText}-${index}`}
                                 variants={letterVariants}
-                                className={index >= t("hero.greeting").length ? "text-accent" : ""}
+                                className={index >= titleText.indexOf(t("about.name")) ? "text-accent" : ""}
                             >
                                 {char}
                             </motion.span>
                         ))}
                     </motion.h1>
                     <motion.h2
+                        key={subtitleText}
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{delayChildren: titleText.length * 0.05}}
+                        transition={{delayChildren: titleText.length * 0.02}}
                         className="font-display  lg:text-5xl md:text-4xl text-3xl ">
                         {subtitleText.split("").map((char, index) => (
-                            <motion.span key={index} variants={letterVariants}>
+                            <motion.span key={`${subtitleText}-${index}`} variants={letterVariants}>
                                 {char}
                             </motion.span>
                         ))}
