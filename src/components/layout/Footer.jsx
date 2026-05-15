@@ -14,7 +14,7 @@ export const Footer = () => {
 
     const socialLinks = [
         {
-            href: "www.linkedin.com/in/tjorve-nielsen",
+            href: "https://linkedin.com/in/tjorve-nielsen",
             label: "LinkedIn",
             Icon: Linkedin
         },
