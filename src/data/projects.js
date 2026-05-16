@@ -3,7 +3,7 @@ const projects = [
         id: "project_2",
         name: {
             de: "Cookie Calculator",
-            en: "Website Sommerbrücke Flensburg"
+            en: "Cookie Calculator"
         },
         description: {
             de: "Ein Rezeptportal, auf dem Hobbybäcker eigene Rezepte mit Fotos veröffentlichen, entdecken und als Favoriten speichern können. Eine integrierte Kalkulationsliste rechnet Zutaten mehrerer Rezepte automatisch zusammen und skaliert die Mengen. Gebaut mit React, Supabase und Tailwind CSS.",

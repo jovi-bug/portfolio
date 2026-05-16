@@ -7,14 +7,14 @@ const ProjectCard = ({project}) => {
 
     return (
         <motion.div className="scaling-div blur-bg-strong shadow-custom-lg rounded-lg min-h-100 ">
-            <div className="flex flex-col w-full h-full items-end justify-between">
+            <div className="flex flex-col w-full h-full items-end">
 
                 <img src={project.imgPath ? project.imgPath : '/images/placeholder.jpg'}
                      alt={`Screenshot for ${project.name[i18n.language]}`}
                      className="w-full max-h-48 object-cover object-top rounded-lg"/>
 
 
-                <div className="p-4 flex flex-col gap-4 ">
+                <div className="p-4 flex flex-col gap-4 justify-between h-full ">
 
                     {/* Headline and Live-Status */}
                     <div className="flex gap-4 justify-between content-center">
